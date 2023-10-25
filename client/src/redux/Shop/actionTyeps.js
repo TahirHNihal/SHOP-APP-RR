@@ -1,6 +1,12 @@
+//Get Brand Action Types
 export const GET_BRAND_REQUEST = "GET_BRAND_REQUEST";
 export const GET_BRAND_SUCCESS = "GET_BRAND_SUCCESS";
 export const GET_BRAND_FAILED = "GET_BRAND_FAILED";
 
+//Create Brand Action Types
 export const CREATE_BRAND_SUCCESS = "CREATE_BRAND_SUCCESS";
 export const CREATE_BRAND_FAILED = "CREATE_BRAND_FAILED";
+
+//Delete Brand Action Types
+export const DELETE_BRAND_SUCCESS = "DELETE_BRAND_SUCCESS";
+export const DELETE_BRAND_FAILED = "DELETE_BRAND_FAILED";

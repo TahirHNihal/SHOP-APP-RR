@@ -1,5 +1,6 @@
 import {
   CREATE_BRAND_SUCCESS,
+  DELETE_BRAND_SUCCESS,
   GET_BRAND_FAILED,
   GET_BRAND_REQUEST,
   GET_BRAND_SUCCESS,
@@ -31,6 +32,11 @@ const shopReducer = (state = initialState, { type, payload }) => {
       return {
         ...state,
         brands: [...state.brands, payload],
+      };
+    case DELETE_BRAND_SUCCESS:
+      return {
+        ...state,
+        brands: state.brands.filter((data) => data._id !== payload),
       };
     default:
       return state;

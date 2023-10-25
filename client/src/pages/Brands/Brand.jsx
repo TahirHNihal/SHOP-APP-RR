@@ -3,14 +3,15 @@ import "./Brand.scss";
 import { Form, Table } from "react-bootstrap";
 import { BiPlus, BiSolidEdit, BiTrash } from "react-icons/bi";
 import BrandModal from "./BrandModal";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { deleteBrand } from "../../redux/Shop/actions";
 
 const Brand = () => {
   const [show, setShow] = useState(false);
   const [status, setStatus] = useState(true);
 
   const { brands } = useSelector((state) => state.shop);
-  // console.log(useSelector((state) => state.shop.name));
+  const dispatch = useDispatch();
   return (
     <>
       <div id="brand-page">
@@ -38,7 +39,7 @@ const Brand = () => {
             </thead>
             <tbody>
               {brands.length > 0 ? (
-                brands.map(({ name, photo }, index) => {
+                brands.map(({ name, photo, slug, _id }, index) => {
                   return (
                     <tr className="align-middle" key={index}>
                       <td>{index + 1}</td>
@@ -70,7 +71,7 @@ const Brand = () => {
                             </button>
                           </li>
                           <li>
-                            <button>
+                            <button onClick={() => dispatch(deleteBrand(_id))}>
                               <BiTrash />
                             </button>
                           </li>
