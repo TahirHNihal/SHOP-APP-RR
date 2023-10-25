@@ -1,0 +1,114 @@
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+ul {
+  margin: 0;
+}
+.product-rating {
+  ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    li {
+      color: #ffc107;
+    }
+  }
+}
+.modal-header {
+  border: none;
+}
+.single_product-wraper {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 30px 20px;
+  .single_product_left {
+    // border-right: 1px solid #000;
+    .product-photo {
+      height: 100%;
+      width: 100%;
+      //   background: #000;
+      border-radius: 5px;
+      border: 1px solid #ececec;
+      padding: 15px;
+      margin-bottom: 20px;
+      text-align: center;
+      img {
+        // width: 80%;
+      }
+    }
+    .product_gal {
+      ul {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        flex-direction: row;
+        text-align: center;
+        li {
+          width: 23%;
+          background: #fff;
+          padding: 10px;
+          border: 1px solid #ececec;
+          border-radius: 5px;
+          img {
+            width: 80px;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+  .single_product_right {
+    .product-details {
+      h2 {
+        font-size: 33px;
+        font-weight: 600;
+      }
+      .product-price {
+        display: flex;
+        align-items: flex-end;
+        gap: 20px;
+        font-size: 25px;
+        margin-bottom: 30px;
+
+        p {
+          font-weight: 500;
+          text-decoration: line-through;
+          color: #7e7e7e;
+          margin: 0;
+        }
+        p:nth-child(1) {
+          font-size: 35px;
+          font-weight: 700;
+          color: #ff686e;
+          text-decoration: none;
+        }
+      }
+      p {
+        font-size: 18px;
+        margin-bottom: 40px;
+      }
+      .cart-div {
+        button {
+          background: #ff686e;
+          color: #fff;
+          font-size: 16px;
+          font-weight: 600;
+          padding: 8px 15px;
+          border-radius: 5px;
+          transition: 0.3s ease-in-out;
+          border: none;
+          .cart-icon {
+            font-size: 20px;
+          }
+        }
+        button:hover {
+          background: #d95a5e;
+        }
+      }
+    }
+  }
+}

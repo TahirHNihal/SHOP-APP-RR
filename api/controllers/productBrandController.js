@@ -1,3 +1,4 @@
+import { createSlug } from "../helper/slugCreate.js";
 import Brand from "../models/Brand.js";
 
 //Get all the brand
@@ -6,7 +7,7 @@ export const getAllProductBrand = async (req, res) => {
     const data = await Brand.find();
     res.status(200).json({
       brands: data,
-      message: "Data gatet",
+      message: "Brand data gatet",
     });
   } catch (error) {
     res.status(200).json({
@@ -21,19 +22,19 @@ export const getAllProductBrand = async (req, res) => {
 //Create product brand
 export const createProductBrand = async (req, res) => {
   try {
-    const { name, slug } = req.body;
+    const { name} = req.body;
     const data = await Brand.create({
       name,
-      slug,
+      slug: createSlug(name),
       photo: req.file.filename,
     });
     res.status(200).json({
-      brands: data,
+      brand: data,
       message: "Create brand successful",
     });
   } catch (error) {
     res.status(200).json({
-      brands: [],
+      brand: [],
       message: "",
       error: error.message,
     });

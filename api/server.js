@@ -4,6 +4,8 @@ import dotenv from "dotenv";
 import cors from "cors";
 import productCaregoryRoute from "./routes/productCategory.js";
 import productBrandRoute from "./routes/productBrand.js";
+import productTagRoute from "./routes/productTag.js";
+import productRoute from "./routes/product.js";
 import mongoDBConncent from "./config/db.js";
 
 //Init Express
@@ -21,6 +23,8 @@ app.use(express.static("api/public"));
 //Routes
 app.use("/api/v1/product", productCaregoryRoute);
 app.use("/api/v1/product", productBrandRoute);
+app.use("/api/v1/product", productTagRoute);
+app.use("/api/v1/product", productRoute);
 
 //Environment variable
 const PORT = process.env.PORT || 9090;

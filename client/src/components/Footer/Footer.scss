@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  #footer-sec {
+      // background: coral;
+      border-top: 1px solid #000;
+      background: #fbce5e;
+      height: 60px;
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .footer-left {
+        width: 33.3%;
+        height: 60px;
+      }
+      .footer-center {
+        width: 33.3%;
+        height: 60px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p {
+          font-size: 14px;
+          font-weight: 400;
+          margin: 0;
+        }
+      }
+      .footer-right {
+        width: 33.3%;
+        height: 60px;
+      }
+    }
+  }
+  

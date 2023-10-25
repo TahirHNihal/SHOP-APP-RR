@@ -1,0 +1,28 @@
+button {
+  background: #ff686e;
+  color: #fff;
+  font-size: 20px;
+  padding: 7px;
+  padding-top: 3px;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+form{
+    label{
+        font-size: 18px;
+        font-weight: 500;
+    }
+    input{
+        margin-bottom: 10px;
+    }
+}
+
+.preview-photo{
+    img{
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+}
